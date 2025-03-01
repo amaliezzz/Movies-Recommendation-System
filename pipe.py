@@ -27,13 +27,8 @@ def find(title):
         
         cos = cosine(vector_, vector)
         if cos<0.99:
-            lst.append( [ cos, row['movie_title']]  )
+            lst.append( [ cos, row['title'], row['plot'], row['type'], row['genre'] , row['runtime']]  )
         
     lst.sort(reverse=True)
     
     return lst[:10]
-        
-        
-        
-        
-    
